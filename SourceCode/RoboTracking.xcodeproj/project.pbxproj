@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1211297118B9BF99004884BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211297018B9BF99004884BC /* Foundation.framework */; };
+		1211297318B9BF99004884BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211297218B9BF99004884BC /* CoreGraphics.framework */; };
+		1211297518B9BF99004884BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211297418B9BF99004884BC /* UIKit.framework */; };
+		1211297B18B9BF99004884BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1211297918B9BF99004884BC /* InfoPlist.strings */; };
+		1211297D18B9BF99004884BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1211297C18B9BF99004884BC /* main.m */; };
+		1211298118B9BF99004884BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1211298018B9BF99004884BC /* AppDelegate.m */; };
+		1211298418B9BF99004884BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1211298218B9BF99004884BC /* Main.storyboard */; };
+		1211298718B9BF99004884BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1211298618B9BF99004884BC /* ViewController.m */; };
+		1211298918B9BF99004884BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1211298818B9BF99004884BC /* Images.xcassets */; };
+		1211299018B9BF99004884BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211298F18B9BF99004884BC /* XCTest.framework */; };
+		1211299118B9BF99004884BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211297018B9BF99004884BC /* Foundation.framework */; };
+		1211299218B9BF99004884BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211297418B9BF99004884BC /* UIKit.framework */; };
+		1211299A18B9BF99004884BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1211299818B9BF99004884BC /* InfoPlist.strings */; };
+		1211299C18B9BF99004884BC /* RoboTrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1211299B18B9BF99004884BC /* RoboTrackingTests.m */; };
+		121129C718B9C072004884BC /* Main Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 121129C618B9C072004884BC /* Main Window.m */; };
+		121129CA18B9C093004884BC /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 121129C918B9C093004884BC /* Connection.m */; };
+		121129CC18B9C18F004884BC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121129CB18B9C18F004884BC /* CoreMotion.framework */; };
+		121129CE18B9C198004884BC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121129CD18B9C198004884BC /* AudioToolbox.framework */; };
+		125F1D2F18BA87A0000D5276 /* redline.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2418BA87A0000D5276 /* redline.png */; };
+		125F1D3018BA87A0000D5276 /* robotgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2518BA87A0000D5276 /* robotgreen.png */; };
+		125F1D3118BA87A0000D5276 /* robotred1.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2618BA87A0000D5276 /* robotred1.png */; };
+		125F1D3218BA87A0000D5276 /* robotred2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2718BA87A0000D5276 /* robotred2.png */; };
+		125F1D3318BA87A0000D5276 /* robotred3.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2818BA87A0000D5276 /* robotred3.png */; };
+		125F1D3418BA87A0000D5276 /* robotred4.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2918BA87A0000D5276 /* robotred4.png */; };
+		125F1D3518BA87A0000D5276 /* robotred5.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2A18BA87A0000D5276 /* robotred5.png */; };
+		125F1D3618BA87A0000D5276 /* run.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2B18BA87A0000D5276 /* run.png */; };
+		125F1D3718BA87A0000D5276 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2C18BA87A0000D5276 /* stop.png */; };
+		125F1D3818BA87A0000D5276 /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2D18BA87A0000D5276 /* wifi.png */; };
+		125F1D3918BA87A0000D5276 /* yellowarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D2E18BA87A0000D5276 /* yellowarrow.png */; };
+		125F1D4018BA87B3000D5276 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D3B18BA87B3000D5276 /* Default.png */; };
+		125F1D4118BA87B3000D5276 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D3C18BA87B3000D5276 /* Default@2x.png */; };
+		125F1D4218BA87B3000D5276 /* iPhone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D3D18BA87B3000D5276 /* iPhone5@2x.png */; };
+		125F1D4318BA87B3000D5276 /* iPhone5Spot.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D3E18BA87B3000D5276 /* iPhone5Spot.png */; };
+		125F1D4418BA87B3000D5276 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D3F18BA87B3000D5276 /* iPhone@2x.png */; };
+		125F1D5918BA87BE000D5276 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4618BA87BE000D5276 /* 1.png */; };
+		125F1D5A18BA87BE000D5276 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4718BA87BE000D5276 /* 10.png */; };
+		125F1D5B18BA87BE000D5276 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4818BA87BE000D5276 /* 11.png */; };
+		125F1D5C18BA87BE000D5276 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4918BA87BE000D5276 /* 12.png */; };
+		125F1D5D18BA87BE000D5276 /* 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4A18BA87BE000D5276 /* 13.png */; };
+		125F1D5E18BA87BE000D5276 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4B18BA87BE000D5276 /* 14.png */; };
+		125F1D5F18BA87BE000D5276 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4C18BA87BE000D5276 /* 15.png */; };
+		125F1D6018BA87BE000D5276 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4D18BA87BE000D5276 /* 16.png */; };
+		125F1D6118BA87BE000D5276 /* 17.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4E18BA87BE000D5276 /* 17.png */; };
+		125F1D6218BA87BE000D5276 /* 18.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D4F18BA87BE000D5276 /* 18.png */; };
+		125F1D6318BA87BE000D5276 /* 19.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5018BA87BE000D5276 /* 19.png */; };
+		125F1D6418BA87BE000D5276 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5118BA87BE000D5276 /* 2.png */; };
+		125F1D6518BA87BE000D5276 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5218BA87BE000D5276 /* 3.png */; };
+		125F1D6618BA87BE000D5276 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5318BA87BE000D5276 /* 4.png */; };
+		125F1D6718BA87BE000D5276 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5418BA87BE000D5276 /* 5.png */; };
+		125F1D6818BA87BE000D5276 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5518BA87BE000D5276 /* 6.png */; };
+		125F1D6918BA87BE000D5276 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5618BA87BE000D5276 /* 7.png */; };
+		125F1D6A18BA87BE000D5276 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5718BA87BE000D5276 /* 8.png */; };
+		125F1D6B18BA87BE000D5276 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D5818BA87BE000D5276 /* 9.png */; };
+		125F1D7718BA8F41000D5276 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D6D18BA8F41000D5276 /* down.png */; };
+		125F1D7818BA8F41000D5276 /* down2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D6E18BA8F41000D5276 /* down2.png */; };
+		125F1D7918BA8F41000D5276 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D6F18BA8F41000D5276 /* left.png */; };
+		125F1D7A18BA8F41000D5276 /* left2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7018BA8F41000D5276 /* left2.png */; };
+		125F1D7B18BA8F41000D5276 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7118BA8F41000D5276 /* right.png */; };
+		125F1D7C18BA8F41000D5276 /* right2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7218BA8F41000D5276 /* right2.png */; };
+		125F1D7D18BA8F41000D5276 /* still.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7318BA8F41000D5276 /* still.png */; };
+		125F1D7E18BA8F41000D5276 /* still2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7418BA8F41000D5276 /* still2.png */; };
+		125F1D7F18BA8F41000D5276 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7518BA8F41000D5276 /* up.png */; };
+		125F1D8018BA8F41000D5276 /* up2.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F1D7618BA8F41000D5276 /* up2.png */; };
+		12B98D4C18BB11DE000B529D /* redlinesandnumber.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B98D4718BB11DE000B529D /* redlinesandnumber.png */; };
+		12B98D4D18BB11DE000B529D /* robotcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B98D4818BB11DE000B529D /* robotcolor.png */; };
+		12B98D4E18BB11DE000B529D /* runandstop.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B98D4918BB11DE000B529D /* runandstop.png */; };
+		12B98D4F18BB11DE000B529D /* speedanddistance.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B98D4A18BB11DE000B529D /* speedanddistance.png */; };
+		12B98D5018BB11DE000B529D /* yelarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B98D4B18BB11DE000B529D /* yelarrow.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1211299318B9BF99004884BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1211296518B9BF99004884BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1211296C18B9BF99004884BC;
+			remoteInfo = RoboTracking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1211296D18B9BF99004884BC /* RoboTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoboTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1211297018B9BF99004884BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1211297218B9BF99004884BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1211297418B9BF99004884BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1211297818B9BF99004884BC /* RoboTracking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoboTracking-Info.plist"; sourceTree = "<group>"; };
+		1211297A18B9BF99004884BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1211297C18B9BF99004884BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1211297E18B9BF99004884BC /* RoboTracking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoboTracking-Prefix.pch"; sourceTree = "<group>"; };
+		1211297F18B9BF99004884BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1211298018B9BF99004884BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1211298318B9BF99004884BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1211298518B9BF99004884BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1211298618B9BF99004884BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1211298818B9BF99004884BC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1211298E18B9BF99004884BC /* RoboTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoboTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1211298F18B9BF99004884BC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1211299718B9BF99004884BC /* RoboTrackingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoboTrackingTests-Info.plist"; sourceTree = "<group>"; };
+		1211299918B9BF99004884BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1211299B18B9BF99004884BC /* RoboTrackingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoboTrackingTests.m; sourceTree = "<group>"; };
+		121129C518B9C072004884BC /* Main Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Main Window.h"; path = "../Main Window.h"; sourceTree = "<group>"; };
+		121129C618B9C072004884BC /* Main Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Main Window.m"; path = "../Main Window.m"; sourceTree = "<group>"; };
+		121129C818B9C092004884BC /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = ../Connection.h; sourceTree = "<group>"; };
+		121129C918B9C093004884BC /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = ../Connection.m; sourceTree = "<group>"; };
+		121129CB18B9C18F004884BC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		121129CD18B9C198004884BC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		125F1D2418BA87A0000D5276 /* redline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redline.png; sourceTree = "<group>"; };
+		125F1D2518BA87A0000D5276 /* robotgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotgreen.png; sourceTree = "<group>"; };
+		125F1D2618BA87A0000D5276 /* robotred1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotred1.png; sourceTree = "<group>"; };
+		125F1D2718BA87A0000D5276 /* robotred2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotred2.png; sourceTree = "<group>"; };
+		125F1D2818BA87A0000D5276 /* robotred3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotred3.png; sourceTree = "<group>"; };
+		125F1D2918BA87A0000D5276 /* robotred4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotred4.png; sourceTree = "<group>"; };
+		125F1D2A18BA87A0000D5276 /* robotred5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotred5.png; sourceTree = "<group>"; };
+		125F1D2B18BA87A0000D5276 /* run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run.png; sourceTree = "<group>"; };
+		125F1D2C18BA87A0000D5276 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		125F1D2D18BA87A0000D5276 /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
+		125F1D2E18BA87A0000D5276 /* yellowarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowarrow.png; sourceTree = "<group>"; };
+		125F1D3B18BA87B3000D5276 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		125F1D3C18BA87B3000D5276 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		125F1D3D18BA87B3000D5276 /* iPhone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone5@2x.png"; sourceTree = "<group>"; };
+		125F1D3E18BA87B3000D5276 /* iPhone5Spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone5Spot.png; sourceTree = "<group>"; };
+		125F1D3F18BA87B3000D5276 /* iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone@2x.png"; sourceTree = "<group>"; };
+		125F1D4618BA87BE000D5276 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		125F1D4718BA87BE000D5276 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		125F1D4818BA87BE000D5276 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		125F1D4918BA87BE000D5276 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		125F1D4A18BA87BE000D5276 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
+		125F1D4B18BA87BE000D5276 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
+		125F1D4C18BA87BE000D5276 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
+		125F1D4D18BA87BE000D5276 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
+		125F1D4E18BA87BE000D5276 /* 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 17.png; sourceTree = "<group>"; };
+		125F1D4F18BA87BE000D5276 /* 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 18.png; sourceTree = "<group>"; };
+		125F1D5018BA87BE000D5276 /* 19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19.png; sourceTree = "<group>"; };
+		125F1D5118BA87BE000D5276 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		125F1D5218BA87BE000D5276 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		125F1D5318BA87BE000D5276 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		125F1D5418BA87BE000D5276 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		125F1D5518BA87BE000D5276 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		125F1D5618BA87BE000D5276 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		125F1D5718BA87BE000D5276 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		125F1D5818BA87BE000D5276 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		125F1D6D18BA8F41000D5276 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		125F1D6E18BA8F41000D5276 /* down2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down2.png; sourceTree = "<group>"; };
+		125F1D6F18BA8F41000D5276 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		125F1D7018BA8F41000D5276 /* left2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left2.png; sourceTree = "<group>"; };
+		125F1D7118BA8F41000D5276 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		125F1D7218BA8F41000D5276 /* right2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right2.png; sourceTree = "<group>"; };
+		125F1D7318BA8F41000D5276 /* still.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = still.png; sourceTree = "<group>"; };
+		125F1D7418BA8F41000D5276 /* still2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = still2.png; sourceTree = "<group>"; };
+		125F1D7518BA8F41000D5276 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		125F1D7618BA8F41000D5276 /* up2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up2.png; sourceTree = "<group>"; };
+		12B98D4718BB11DE000B529D /* redlinesandnumber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redlinesandnumber.png; sourceTree = "<group>"; };
+		12B98D4818BB11DE000B529D /* robotcolor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotcolor.png; sourceTree = "<group>"; };
+		12B98D4918BB11DE000B529D /* runandstop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runandstop.png; sourceTree = "<group>"; };
+		12B98D4A18BB11DE000B529D /* speedanddistance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speedanddistance.png; sourceTree = "<group>"; };
+		12B98D4B18BB11DE000B529D /* yelarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yelarrow.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1211296A18B9BF99004884BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121129CE18B9C198004884BC /* AudioToolbox.framework in Frameworks */,
+				121129CC18B9C18F004884BC /* CoreMotion.framework in Frameworks */,
+				1211297318B9BF99004884BC /* CoreGraphics.framework in Frameworks */,
+				1211297518B9BF99004884BC /* UIKit.framework in Frameworks */,
+				1211297118B9BF99004884BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1211298B18B9BF99004884BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1211299018B9BF99004884BC /* XCTest.framework in Frameworks */,
+				1211299218B9BF99004884BC /* UIKit.framework in Frameworks */,
+				1211299118B9BF99004884BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1211296418B9BF99004884BC = {
+			isa = PBXGroup;
+			children = (
+				1211297618B9BF99004884BC /* RoboTracking */,
+				1211299518B9BF99004884BC /* RoboTrackingTests */,
+				1211296F18B9BF99004884BC /* Frameworks */,
+				1211296E18B9BF99004884BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1211296E18B9BF99004884BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1211296D18B9BF99004884BC /* RoboTracking.app */,
+				1211298E18B9BF99004884BC /* RoboTrackingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1211296F18B9BF99004884BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				121129CD18B9C198004884BC /* AudioToolbox.framework */,
+				121129CB18B9C18F004884BC /* CoreMotion.framework */,
+				1211297018B9BF99004884BC /* Foundation.framework */,
+				1211297218B9BF99004884BC /* CoreGraphics.framework */,
+				1211297418B9BF99004884BC /* UIKit.framework */,
+				1211298F18B9BF99004884BC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1211297618B9BF99004884BC /* RoboTracking */ = {
+			isa = PBXGroup;
+			children = (
+				1211297F18B9BF99004884BC /* AppDelegate.h */,
+				1211298018B9BF99004884BC /* AppDelegate.m */,
+				1211298218B9BF99004884BC /* Main.storyboard */,
+				1211298518B9BF99004884BC /* ViewController.h */,
+				1211298618B9BF99004884BC /* ViewController.m */,
+				121129C518B9C072004884BC /* Main Window.h */,
+				121129C618B9C072004884BC /* Main Window.m */,
+				121129C818B9C092004884BC /* Connection.h */,
+				121129C918B9C093004884BC /* Connection.m */,
+				1211298818B9BF99004884BC /* Images.xcassets */,
+				1211297718B9BF99004884BC /* Supporting Files */,
+			);
+			path = RoboTracking;
+			sourceTree = "<group>";
+		};
+		1211297718B9BF99004884BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12B98D4618BB11DE000B529D /* Tutorial 2 */,
+				125F1D6C18BA8F41000D5276 /* Tutorial 1 */,
+				125F1D4518BA87BE000D5276 /* Welcome */,
+				125F1D3A18BA87B3000D5276 /* Icon and Launch Images */,
+				125F1D2318BA87A0000D5276 /* Main */,
+				1211297818B9BF99004884BC /* RoboTracking-Info.plist */,
+				1211297918B9BF99004884BC /* InfoPlist.strings */,
+				1211297C18B9BF99004884BC /* main.m */,
+				1211297E18B9BF99004884BC /* RoboTracking-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1211299518B9BF99004884BC /* RoboTrackingTests */ = {
+			isa = PBXGroup;
+			children = (
+				1211299B18B9BF99004884BC /* RoboTrackingTests.m */,
+				1211299618B9BF99004884BC /* Supporting Files */,
+			);
+			path = RoboTrackingTests;
+			sourceTree = "<group>";
+		};
+		1211299618B9BF99004884BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1211299718B9BF99004884BC /* RoboTrackingTests-Info.plist */,
+				1211299818B9BF99004884BC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		125F1D2318BA87A0000D5276 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				125F1D2418BA87A0000D5276 /* redline.png */,
+				125F1D2518BA87A0000D5276 /* robotgreen.png */,
+				125F1D2618BA87A0000D5276 /* robotred1.png */,
+				125F1D2718BA87A0000D5276 /* robotred2.png */,
+				125F1D2818BA87A0000D5276 /* robotred3.png */,
+				125F1D2918BA87A0000D5276 /* robotred4.png */,
+				125F1D2A18BA87A0000D5276 /* robotred5.png */,
+				125F1D2B18BA87A0000D5276 /* run.png */,
+				125F1D2C18BA87A0000D5276 /* stop.png */,
+				125F1D2D18BA87A0000D5276 /* wifi.png */,
+				125F1D2E18BA87A0000D5276 /* yellowarrow.png */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		125F1D3A18BA87B3000D5276 /* Icon and Launch Images */ = {
+			isa = PBXGroup;
+			children = (
+				125F1D3B18BA87B3000D5276 /* Default.png */,
+				125F1D3C18BA87B3000D5276 /* Default@2x.png */,
+				125F1D3D18BA87B3000D5276 /* iPhone5@2x.png */,
+				125F1D3E18BA87B3000D5276 /* iPhone5Spot.png */,
+				125F1D3F18BA87B3000D5276 /* iPhone@2x.png */,
+			);
+			path = "Icon and Launch Images";
+			sourceTree = "<group>";
+		};
+		125F1D4518BA87BE000D5276 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				125F1D4618BA87BE000D5276 /* 1.png */,
+				125F1D4718BA87BE000D5276 /* 10.png */,
+				125F1D4818BA87BE000D5276 /* 11.png */,
+				125F1D4918BA87BE000D5276 /* 12.png */,
+				125F1D4A18BA87BE000D5276 /* 13.png */,
+				125F1D4B18BA87BE000D5276 /* 14.png */,
+				125F1D4C18BA87BE000D5276 /* 15.png */,
+				125F1D4D18BA87BE000D5276 /* 16.png */,
+				125F1D4E18BA87BE000D5276 /* 17.png */,
+				125F1D4F18BA87BE000D5276 /* 18.png */,
+				125F1D5018BA87BE000D5276 /* 19.png */,
+				125F1D5118BA87BE000D5276 /* 2.png */,
+				125F1D5218BA87BE000D5276 /* 3.png */,
+				125F1D5318BA87BE000D5276 /* 4.png */,
+				125F1D5418BA87BE000D5276 /* 5.png */,
+				125F1D5518BA87BE000D5276 /* 6.png */,
+				125F1D5618BA87BE000D5276 /* 7.png */,
+				125F1D5718BA87BE000D5276 /* 8.png */,
+				125F1D5818BA87BE000D5276 /* 9.png */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		125F1D6C18BA8F41000D5276 /* Tutorial 1 */ = {
+			isa = PBXGroup;
+			children = (
+				125F1D6D18BA8F41000D5276 /* down.png */,
+				125F1D6E18BA8F41000D5276 /* down2.png */,
+				125F1D6F18BA8F41000D5276 /* left.png */,
+				125F1D7018BA8F41000D5276 /* left2.png */,
+				125F1D7118BA8F41000D5276 /* right.png */,
+				125F1D7218BA8F41000D5276 /* right2.png */,
+				125F1D7318BA8F41000D5276 /* still.png */,
+				125F1D7418BA8F41000D5276 /* still2.png */,
+				125F1D7518BA8F41000D5276 /* up.png */,
+				125F1D7618BA8F41000D5276 /* up2.png */,
+			);
+			path = "Tutorial 1";
+			sourceTree = "<group>";
+		};
+		12B98D4618BB11DE000B529D /* Tutorial 2 */ = {
+			isa = PBXGroup;
+			children = (
+				12B98D4718BB11DE000B529D /* redlinesandnumber.png */,
+				12B98D4818BB11DE000B529D /* robotcolor.png */,
+				12B98D4918BB11DE000B529D /* runandstop.png */,
+				12B98D4A18BB11DE000B529D /* speedanddistance.png */,
+				12B98D4B18BB11DE000B529D /* yelarrow.png */,
+			);
+			path = "Tutorial 2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1211296C18B9BF99004884BC /* RoboTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1211299F18B9BF99004884BC /* Build configuration list for PBXNativeTarget "RoboTracking" */;
+			buildPhases = (
+				1211296918B9BF99004884BC /* Sources */,
+				1211296A18B9BF99004884BC /* Frameworks */,
+				1211296B18B9BF99004884BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoboTracking;
+			productName = RoboTracking;
+			productReference = 1211296D18B9BF99004884BC /* RoboTracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1211298D18B9BF99004884BC /* RoboTrackingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121129A218B9BF99004884BC /* Build configuration list for PBXNativeTarget "RoboTrackingTests" */;
+			buildPhases = (
+				1211298A18B9BF99004884BC /* Sources */,
+				1211298B18B9BF99004884BC /* Frameworks */,
+				1211298C18B9BF99004884BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1211299418B9BF99004884BC /* PBXTargetDependency */,
+			);
+			name = RoboTrackingTests;
+			productName = RoboTrackingTests;
+			productReference = 1211298E18B9BF99004884BC /* RoboTrackingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1211296518B9BF99004884BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Arnold Maliki";
+				TargetAttributes = {
+					1211296C18B9BF99004884BC = {
+						DevelopmentTeam = 89JRG4TE28;
+					};
+					1211298D18B9BF99004884BC = {
+						TestTargetID = 1211296C18B9BF99004884BC;
+					};
+				};
+			};
+			buildConfigurationList = 1211296818B9BF99004884BC /* Build configuration list for PBXProject "RoboTracking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1211296418B9BF99004884BC;
+			productRefGroup = 1211296E18B9BF99004884BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1211296C18B9BF99004884BC /* RoboTracking */,
+				1211298D18B9BF99004884BC /* RoboTrackingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1211296B18B9BF99004884BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				125F1D6618BA87BE000D5276 /* 4.png in Resources */,
+				125F1D4118BA87B3000D5276 /* Default@2x.png in Resources */,
+				125F1D6118BA87BE000D5276 /* 17.png in Resources */,
+				125F1D2F18BA87A0000D5276 /* redline.png in Resources */,
+				125F1D3818BA87A0000D5276 /* wifi.png in Resources */,
+				125F1D6718BA87BE000D5276 /* 5.png in Resources */,
+				125F1D7918BA8F41000D5276 /* left.png in Resources */,
+				1211298918B9BF99004884BC /* Images.xcassets in Resources */,
+				125F1D6318BA87BE000D5276 /* 19.png in Resources */,
+				125F1D4318BA87B3000D5276 /* iPhone5Spot.png in Resources */,
+				125F1D5D18BA87BE000D5276 /* 13.png in Resources */,
+				125F1D6418BA87BE000D5276 /* 2.png in Resources */,
+				1211297B18B9BF99004884BC /* InfoPlist.strings in Resources */,
+				125F1D4018BA87B3000D5276 /* Default.png in Resources */,
+				125F1D6518BA87BE000D5276 /* 3.png in Resources */,
+				125F1D6818BA87BE000D5276 /* 6.png in Resources */,
+				125F1D6B18BA87BE000D5276 /* 9.png in Resources */,
+				125F1D4218BA87B3000D5276 /* iPhone5@2x.png in Resources */,
+				125F1D5A18BA87BE000D5276 /* 10.png in Resources */,
+				125F1D5E18BA87BE000D5276 /* 14.png in Resources */,
+				125F1D3518BA87A0000D5276 /* robotred5.png in Resources */,
+				125F1D7C18BA8F41000D5276 /* right2.png in Resources */,
+				12B98D4F18BB11DE000B529D /* speedanddistance.png in Resources */,
+				12B98D4C18BB11DE000B529D /* redlinesandnumber.png in Resources */,
+				125F1D7F18BA8F41000D5276 /* up.png in Resources */,
+				125F1D5918BA87BE000D5276 /* 1.png in Resources */,
+				12B98D4E18BB11DE000B529D /* runandstop.png in Resources */,
+				125F1D5F18BA87BE000D5276 /* 15.png in Resources */,
+				12B98D5018BB11DE000B529D /* yelarrow.png in Resources */,
+				125F1D7818BA8F41000D5276 /* down2.png in Resources */,
+				125F1D5B18BA87BE000D5276 /* 11.png in Resources */,
+				125F1D3018BA87A0000D5276 /* robotgreen.png in Resources */,
+				125F1D7E18BA8F41000D5276 /* still2.png in Resources */,
+				125F1D3318BA87A0000D5276 /* robotred3.png in Resources */,
+				125F1D7D18BA8F41000D5276 /* still.png in Resources */,
+				125F1D3718BA87A0000D5276 /* stop.png in Resources */,
+				125F1D7B18BA8F41000D5276 /* right.png in Resources */,
+				125F1D8018BA8F41000D5276 /* up2.png in Resources */,
+				125F1D3218BA87A0000D5276 /* robotred2.png in Resources */,
+				1211298418B9BF99004884BC /* Main.storyboard in Resources */,
+				125F1D6918BA87BE000D5276 /* 7.png in Resources */,
+				12B98D4D18BB11DE000B529D /* robotcolor.png in Resources */,
+				125F1D7718BA8F41000D5276 /* down.png in Resources */,
+				125F1D4418BA87B3000D5276 /* iPhone@2x.png in Resources */,
+				125F1D3418BA87A0000D5276 /* robotred4.png in Resources */,
+				125F1D5C18BA87BE000D5276 /* 12.png in Resources */,
+				125F1D7A18BA8F41000D5276 /* left2.png in Resources */,
+				125F1D3918BA87A0000D5276 /* yellowarrow.png in Resources */,
+				125F1D6A18BA87BE000D5276 /* 8.png in Resources */,
+				125F1D3118BA87A0000D5276 /* robotred1.png in Resources */,
+				125F1D3618BA87A0000D5276 /* run.png in Resources */,
+				125F1D6218BA87BE000D5276 /* 18.png in Resources */,
+				125F1D6018BA87BE000D5276 /* 16.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1211298C18B9BF99004884BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1211299A18B9BF99004884BC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1211296918B9BF99004884BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1211298718B9BF99004884BC /* ViewController.m in Sources */,
+				121129C718B9C072004884BC /* Main Window.m in Sources */,
+				1211298118B9BF99004884BC /* AppDelegate.m in Sources */,
+				1211297D18B9BF99004884BC /* main.m in Sources */,
+				121129CA18B9C093004884BC /* Connection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1211298A18B9BF99004884BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1211299C18B9BF99004884BC /* RoboTrackingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1211299418B9BF99004884BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1211296C18B9BF99004884BC /* RoboTracking */;
+			targetProxy = 1211299318B9BF99004884BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1211297918B9BF99004884BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1211297A18B9BF99004884BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1211298218B9BF99004884BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1211298318B9BF99004884BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1211299818B9BF99004884BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1211299918B9BF99004884BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1211299D18B9BF99004884BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1211299E18B9BF99004884BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		121129A018B9BF99004884BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoboTracking/RoboTracking-Prefix.pch";
+				INFOPLIST_FILE = "RoboTracking/RoboTracking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		121129A118B9BF99004884BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoboTracking/RoboTracking-Prefix.pch";
+				INFOPLIST_FILE = "RoboTracking/RoboTracking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		121129A318B9BF99004884BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoboTracking.app/RoboTracking";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoboTracking/RoboTracking-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RoboTrackingTests/RoboTrackingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		121129A418B9BF99004884BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoboTracking.app/RoboTracking";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoboTracking/RoboTracking-Prefix.pch";
+				INFOPLIST_FILE = "RoboTrackingTests/RoboTrackingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1211296818B9BF99004884BC /* Build configuration list for PBXProject "RoboTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1211299D18B9BF99004884BC /* Debug */,
+				1211299E18B9BF99004884BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1211299F18B9BF99004884BC /* Build configuration list for PBXNativeTarget "RoboTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121129A018B9BF99004884BC /* Debug */,
+				121129A118B9BF99004884BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121129A218B9BF99004884BC /* Build configuration list for PBXNativeTarget "RoboTrackingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121129A318B9BF99004884BC /* Debug */,
+				121129A418B9BF99004884BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1211296518B9BF99004884BC /* Project object */;
+}
