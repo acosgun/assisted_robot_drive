@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreMotion/CoreMotion.h>
-#include <math.h>
+#import <math.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 BOOL isGo;
 float currentTilt;

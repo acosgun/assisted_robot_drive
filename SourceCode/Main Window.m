@@ -58,7 +58,7 @@
     
     currentSpeed = 1;
     currentDistance = 3;
-    actualAngle = 2*M_PI-0.3;
+    actualAngle = 4*M_PI/2;
     
     IPAddress = @"192.168.1.1";
     
@@ -75,6 +75,8 @@
 
     
     currentAngle = atan2f(currentTilt,currentRoll);
+    actualAngle = currentAngle;
+    NSLog(@"%f", currentAngle);
 
     
     
@@ -138,17 +140,21 @@
         
     }
     
+    
     CGAffineTransform yrotate =CGAffineTransformMakeRotation(M_PI/2-currentAngle);
     CGAffineTransform rrotate =CGAffineTransformMakeRotation(M_PI/2-actualAngle);
     CGAffineTransform ytranslation = CGAffineTransformMakeTranslation(yellowrad*cosf(currentAngle), -yellowrad*sinf(currentAngle));
     CGAffineTransform rtranslation = CGAffineTransformMakeTranslation(redrad*cosf(actualAngle),-redrad*sinf(actualAngle));
     Moving.transform = CGAffineTransformConcat(yrotate, ytranslation);
+    //RedLine.transform = yrotate;
+    //Speed2.transform = yrotate;
     RedLine.transform = CGAffineTransformConcat(rrotate, rtranslation);
     Speed2.transform = CGAffineTransformConcat(rrotate, rtranslation);
     
     
+    
     //appear and disappear
-    if ((isGo == NO) || ((currentRoll == 0) && (currentTilt == 0))) {
+    if ((isGo == NO) || ((fabsf(currentRoll) <= 1) && (fabsf(currentTilt) <= 1))) {
         Moving.hidden = YES;
     }
     
