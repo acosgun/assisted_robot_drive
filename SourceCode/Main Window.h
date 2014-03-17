@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreMotion/CoreMotion.h>
-#include <math.h>
+#import <math.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 BOOL isGo;
 float currentTilt;
@@ -21,9 +22,11 @@ BOOL isConnect;
 NSString *IPAddress;
 CMMotionManager *MotionManager;
 float VibrateInterval;
-float yellowrad = 100;
-float redrad = 120;
+float yellowrad;
+float redrad;
 float actualAngle;
+float currentLoop;
+BOOL VibrateOn;
 
 @interface Main_Window : UIViewController
 
@@ -50,7 +53,7 @@ float actualAngle;
 }
 
 
-
+-(void)empty;
 -(IBAction)Start:(id)sender;
 -(IBAction)Connection:(id)sender;
 -(void)CheckConnection;

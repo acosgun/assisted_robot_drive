@@ -5,18 +5,28 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>E66917B0-8D4D-49DF-AB81-E4391A4808A4</string>
+=======
+	<string>1065C869-A65D-40EF-AD84-F2B0C6A99C35</string>
+>>>>>>> 4b42fffa974f56d9fc95f5d8546d66ffc3bfd538
 	<key>IDESourceControlProjectName</key>
 	<string>RoboTracking</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</key>
 		<string>https://github.com/acosgun/assisted_robot_drive.git</string>
+=======
+		<key>71911A99-007F-4DCA-9395-2D1C02369E57</key>
+		<string>ssh://github.com/acosgun/assisted_robot_drive.git</string>
+>>>>>>> 4b42fffa974f56d9fc95f5d8546d66ffc3bfd538
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SourceCode/RoboTracking.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</key>
 		<string>../../..</string>
 	</dict>
@@ -26,13 +36,28 @@
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</string>
+=======
+		<key>71911A99-007F-4DCA-9395-2D1C02369E57</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/acosgun/assisted_robot_drive.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>71911A99-007F-4DCA-9395-2D1C02369E57</string>
+>>>>>>> 4b42fffa974f56d9fc95f5d8546d66ffc3bfd538
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</string>
+=======
+			<string>71911A99-007F-4DCA-9395-2D1C02369E57</string>
+>>>>>>> 4b42fffa974f56d9fc95f5d8546d66ffc3bfd538
 			<key>IDESourceControlWCCName</key>
 			<string>assisted_robot_drive</string>
 		</dict>

@@ -17,10 +17,22 @@
 
 #define degrees(x) (180 * x / M_PI)
 
+-(void)empty {
+
+    
+}
+
 -(IBAction)Start:(id)sender{
     if (isGo == NO) {
         [Start setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
         isGo = YES;
+        currentLoop = 0;
+        [self CheckConnection];
+        if (isConnect==YES){
+            if (currentDistance<2){
+                [self Vibrate];
+            }
+        }
     }
     else {
         [Start setImage:[UIImage imageNamed:@"run.png"] forState:UIControlStateNormal];
@@ -32,8 +44,7 @@
 
 -(IBAction)Connection:(id)sender{
     isGo = NO;
-    
-    
+    currentLoop = 0;
 }
 
 
@@ -46,8 +57,8 @@
     
     
     currentSpeed = 1;
-    currentDistance = 1;
-    actualAngle = 2*M_PI-0.3;
+    currentDistance = 3;
+    actualAngle = 4*M_PI/2;
     
     IPAddress = @"192.168.1.1";
     
@@ -59,13 +70,14 @@
     CMDeviceMotion *motion = MotionManager.deviceMotion;
     Attitude = motion.attitude;
     
-    currentRoll = degrees(Attitude.roll);
-    currentTilt = degrees(Attitude.pitch);
-    currentRoll = 20.012;
-    currentTilt = 30.192;
+    currentRoll = degrees(Attitude.pitch);
+    currentTilt = degrees(Attitude.roll);
+
     
     currentAngle = atan2f(currentTilt,currentRoll);
-    currentAngle = 0;
+    actualAngle = currentAngle;
+    NSLog(@"%f", currentAngle);
+
     
     
     
@@ -85,56 +97,69 @@
     //color change and time timer for vibration
     if (currentDistance > 2){
         UIColor *color = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
-        VibrateTimer = nil;
+        VibrateOn = NO;
         UIImage *img = [UIImage imageNamed:@"robotgreen.png"];
         Robot.image = img;
         [Distance setTextColor:color];
     }
     
     else if ((currentDistance <= 2) && (currentDistance > 1)) {
-        VibrateInterval = 2.5;
+        VibrateOn = YES;
+        VibrateInterval = 25;
         UIImage *img = [UIImage imageNamed:@"robotred1.png"];
         Robot.image = img;
+        UIColor *color = [UIColor colorWithRed:255/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f];
+        [Distance setTextColor:color];
         
     }
     
     else if((currentDistance <= 1) && (currentDistance > 0.5)) {
-        VibrateInterval = 1;
+        VibrateOn = YES;
+        VibrateInterval = 10;
         UIImage *img = [UIImage imageNamed:@"robotred3.png"];
         Robot.image = img;
-    }
-    
-    else if (currentDistance <= 0.2) {
-        VibrateInterval = 0.5;
-        UIImage *img = [UIImage imageNamed:@"robotred5.png"];
-        [Robot setImage:img];
-    }
-    
-    if (currentDistance < 2) {
         UIColor *color = [UIColor colorWithRed:255/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f];
         [Distance setTextColor:color];
-        VibrateTimer = [NSTimer scheduledTimerWithTimeInterval:VibrateInterval target:self selector:@selector(Vibrate) userInfo:nil repeats:YES];
     }
     
-    //rotate stuff
-    Moving.center = CGPointMake(Robot.center.x+yellowrad*cosf(currentAngle),Robot.center.y-yellowrad*sinf(currentAngle));
-    RedLine.center = CGPointMake(Robot.center.x+redrad*cosf(actualAngle),Robot.center.y-redrad*sinf(actualAngle));
-    Speed2.center = CGPointMake(Robot.center.x+redrad*cosf(actualAngle),Robot.center.y-redrad*sinf(actualAngle));
-       
-    Moving.transform = CGAffineTransformMakeRotation(M_PI/2-currentAngle);
-    RedLine.transform = CGAffineTransformMakeRotation(M_PI/2-actualAngle);
-    Speed2.transform = CGAffineTransformMakeRotation(M_PI/2-actualAngle);
+    else if (currentDistance <= 0.5) {
+        VibrateOn = YES;
+        VibrateInterval = 5;
+        UIImage *img = [UIImage imageNamed:@"robotred5.png"];
+        [Robot setImage:img];
+        UIColor *color = [UIColor colorWithRed:255/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f];
+        [Distance setTextColor:color];
+    }
     
-
+    if ((currentDistance < 2) && (VibrateOn==YES)&&(isGo==YES)) {
+        currentLoop = currentLoop+1;
+        if (currentLoop >= VibrateInterval) {
+            [self Vibrate];
+            currentLoop = 0;
+        }
+        
+    }
+    
+    
+    CGAffineTransform yrotate =CGAffineTransformMakeRotation(M_PI/2-currentAngle);
+    CGAffineTransform rrotate =CGAffineTransformMakeRotation(M_PI/2-actualAngle);
+    CGAffineTransform ytranslation = CGAffineTransformMakeTranslation(yellowrad*cosf(currentAngle), -yellowrad*sinf(currentAngle));
+    CGAffineTransform rtranslation = CGAffineTransformMakeTranslation(redrad*cosf(actualAngle),-redrad*sinf(actualAngle));
+    Moving.transform = CGAffineTransformConcat(yrotate, ytranslation);
+    //RedLine.transform = yrotate;
+    //Speed2.transform = yrotate;
+    RedLine.transform = CGAffineTransformConcat(rrotate, rtranslation);
+    Speed2.transform = CGAffineTransformConcat(rrotate, rtranslation);
+    
     
     
     //appear and disappear
-    if (isGo == YES) {
-        Moving.hidden = NO;
+    if ((isGo == NO) || ((fabsf(currentRoll) <= 1) && (fabsf(currentTilt) <= 1))) {
+        Moving.hidden = YES;
     }
     
     else {
-        Moving.hidden = YES;
+        Moving.hidden = NO;
     }
     
     
@@ -142,11 +167,15 @@
     if (isConnect==YES) {
         Status.text = @"Connected";
         IP.text = IPAddress;
+        RedLine.hidden = NO;
+        Speed2.hidden = NO;
     }
     
     else {
         Status.text = @"Disconnected";
         IP.text = @"N/A";
+        RedLine.hidden = YES;
+        Speed2.hidden = YES;
         //GIVE ALERT
     }
     
@@ -178,9 +207,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    yellowrad = 220;
+    redrad = 260;
     isGo = NO;
     isConnect = YES;
+    VibrateOn = NO;
+    currentLoop = 0;
+    
+    Moving.hidden = YES;
+    RedLine.hidden = YES;
+    Speed2.hidden=YES;
     
     MotionManager = ([[CMMotionManager alloc]init]);
     MotionManager.deviceMotionUpdateInterval = 1/60;
