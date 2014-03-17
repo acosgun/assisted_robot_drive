@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12B1867418D7953B003FBEA6 /* DebuggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B1867318D7953B003FBEA6 /* DebuggerViewController.m */; };
 		7A36DB2B18D5548E005D6308 /* spanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A36DB2918D5548E005D6308 /* spanner.png */; };
 		7A36DB2C18D5548E005D6308 /* arrow-small-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A36DB2A18D5548E005D6308 /* arrow-small-16.png */; };
 		7A6FA91118BEF27800DBC726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6FA91018BEF27800DBC726 /* Foundation.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12B1867218D7953B003FBEA6 /* DebuggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebuggerViewController.h; sourceTree = "<group>"; };
+		12B1867318D7953B003FBEA6 /* DebuggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebuggerViewController.m; sourceTree = "<group>"; };
 		7A36DB2918D5548E005D6308 /* spanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spanner.png; path = static/spanner.png; sourceTree = "<group>"; };
 		7A36DB2A18D5548E005D6308 /* arrow-small-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-small-16.png"; path = "static/arrow-small-16.png"; sourceTree = "<group>"; };
 		7A6FA90D18BEF27800DBC726 /* robot_ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = robot_ui.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,8 @@
 				7A90631518BEF34700C6B038 /* Main.storyboard */,
 				7A90631718BEFD5B00C6B038 /* RemoteControlViewController.h */,
 				7A90631818BEFD5B00C6B038 /* RemoteControlViewController.m */,
+				12B1867218D7953B003FBEA6 /* DebuggerViewController.h */,
+				12B1867318D7953B003FBEA6 /* DebuggerViewController.m */,
 				7A6FA91718BEF27800DBC726 /* Supporting Files */,
 			);
 			path = robot_ui;
@@ -221,9 +226,12 @@
 		7A6FA90518BEF27800DBC726 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Akansel Cosgun";
 				TargetAttributes = {
+					7A6FA90C18BEF27800DBC726 = {
+						DevelopmentTeam = 89JRG4TE28;
+					};
 					7A6FA92718BEF27900DBC726 = {
 						TestTargetID = 7A6FA90C18BEF27800DBC726;
 					};
@@ -279,6 +287,7 @@
 				7A6FA92118BEF27800DBC726 /* AppDelegate.m in Sources */,
 				7A6FA91D18BEF27800DBC726 /* main.m in Sources */,
 				7A90631918BEFD5B00C6B038 /* RemoteControlViewController.m in Sources */,
+				12B1867418D7953B003FBEA6 /* DebuggerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +333,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -363,7 +371,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -397,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "robot_ui/robot_ui-Prefix.pch";
 				INFOPLIST_FILE = "robot_ui/robot_ui-Info.plist";
@@ -410,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "robot_ui/robot_ui-Prefix.pch";
 				INFOPLIST_FILE = "robot_ui/robot_ui-Info.plist";
@@ -421,7 +430,6 @@
 		7A6FA93D18BEF27900DBC726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/robot_ui.app/robot_ui";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -444,7 +452,6 @@
 		7A6FA93E18BEF27900DBC726 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/robot_ui.app/robot_ui";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
