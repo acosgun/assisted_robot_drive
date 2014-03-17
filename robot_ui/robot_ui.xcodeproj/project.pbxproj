@@ -24,6 +24,8 @@
 		7A90631618BEF34700C6B038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A90631518BEF34700C6B038 /* Main.storyboard */; };
 		7A90631918BEFD5B00C6B038 /* RemoteControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A90631818BEFD5B00C6B038 /* RemoteControlViewController.m */; };
 		7A90631B18BEFF6500C6B038 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A90631A18BEFF6500C6B038 /* AudioToolbox.framework */; };
+		7AF5316A18D76CB100127E5D /* compass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5316918D76CB100127E5D /* compass.jpg */; };
+		7AF5316C18D76DCF00127E5D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF5316B18D76DCF00127E5D /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		7A90631718BEFD5B00C6B038 /* RemoteControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteControlViewController.h; sourceTree = "<group>"; };
 		7A90631818BEFD5B00C6B038 /* RemoteControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteControlViewController.m; sourceTree = "<group>"; };
 		7A90631A18BEFF6500C6B038 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7AF5316918D76CB100127E5D /* compass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = compass.jpg; path = static/compass.jpg; sourceTree = "<group>"; };
+		7AF5316B18D76DCF00127E5D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF5316C18D76DCF00127E5D /* CoreMotion.framework in Frameworks */,
 				7A90631B18BEFF6500C6B038 /* AudioToolbox.framework in Frameworks */,
 				7A6FA91318BEF27800DBC726 /* CoreGraphics.framework in Frameworks */,
 				7A6FA91518BEF27800DBC726 /* UIKit.framework in Frameworks */,
@@ -89,6 +94,7 @@
 		7A36DB2818D5547C005D6308 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7AF5316918D76CB100127E5D /* compass.jpg */,
 				7A36DB2918D5548E005D6308 /* spanner.png */,
 				7A36DB2A18D5548E005D6308 /* arrow-small-16.png */,
 			);
@@ -117,6 +123,7 @@
 		7A6FA90F18BEF27800DBC726 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AF5316B18D76DCF00127E5D /* CoreMotion.framework */,
 				7A90631A18BEFF6500C6B038 /* AudioToolbox.framework */,
 				7A6FA91018BEF27800DBC726 /* Foundation.framework */,
 				7A6FA91218BEF27800DBC726 /* CoreGraphics.framework */,
@@ -249,6 +256,7 @@
 				7A36DB2C18D5548E005D6308 /* arrow-small-16.png in Resources */,
 				7A36DB2B18D5548E005D6308 /* spanner.png in Resources */,
 				7A6FA91B18BEF27800DBC726 /* InfoPlist.strings in Resources */,
+				7AF5316A18D76CB100127E5D /* compass.jpg in Resources */,
 				7A6FA92318BEF27800DBC726 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

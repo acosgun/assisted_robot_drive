@@ -8,6 +8,9 @@
 
 #import "RemoteControlViewController.h"
 
+#define degrees(x) (180 * x / M_PI)
+
+
 @interface RemoteControlViewController ()
 // Outlets and actions here.
 @end
@@ -30,7 +33,10 @@
     
     //is_connected = TRUE;
     
-    _connection_label.text = @"Connected";
+    _connection_label.text = @"Status: Disconnected";
+    _connection_label.transform = CGAffineTransformMakeRotation(-90 * M_PI / 180.0);
+    //_connection_label.textColor = [UIColor colorWithRed:255 green:20 blue:20 alpha:1.0];
+    _connection_label.textColor = [UIColor redColor];
     
     //_connection_label_2.text = @"Connected2";
 }

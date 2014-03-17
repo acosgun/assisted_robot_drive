@@ -37,33 +37,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status: Disconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-rj-RaP">
-                                <rect key="frame" x="139" y="20" width="161" height="21"/>
+                                <rect key="frame" x="20" y="252" width="33" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dM5-lg-K98">
-                                <rect key="frame" x="75" y="168" width="127" height="61"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c5m-mo-Mxh">
+                                <rect key="frame" x="18" y="32" width="284" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="ad">
-                                            <attributes>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHN-uF-nFo">
-                                <rect key="frame" x="75" y="218" width="50" height="30"/>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nkh-7k-vi7">
+                                <rect key="frame" x="110" y="285" width="101" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tutorial">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c5m-mo-Mxh" firstAttribute="top" secondItem="xIU-Kd-znK" secondAttribute="bottom" constant="12" id="4cR-6P-av8"/>
+                            <constraint firstItem="c5m-mo-Mxh" firstAttribute="leading" secondItem="Tub-Yb-0zM" secondAttribute="leading" constant="20" id="Aut-28-haM"/>
+                            <constraint firstAttribute="trailing" secondItem="c5m-mo-Mxh" secondAttribute="trailing" constant="20" id="tbl-7d-B7g"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Navigation" image="arrow-small-16.png" id="CKc-11-FKT"/>
                     <connections>
@@ -73,24 +66,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rj-aa-ebu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63" y="-444"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eWG-dK-3oZ">
-            <objects>
-                <viewController id="ONo-R8-HUd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TOL-fB-zcM"/>
-                        <viewControllerLayoutGuide type="bottom" id="DFD-2V-BdN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="N5R-09-fzw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZY1-40-i3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="530" y="-456"/>
         </scene>
         <!--View Controller - Debug-->
         <scene sceneID="cYL-sk-9qt">
@@ -149,6 +124,7 @@
     </scenes>
     <resources>
         <image name="arrow-small-16.png" width="29" height="30"/>
+        <image name="compass.jpg" width="170" height="170"/>
         <image name="spanner.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
