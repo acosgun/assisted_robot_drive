@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E66917B0-8D4D-49DF-AB81-E4391A4808A4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RoboTracking</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</key>
+		<string>https://github.com/acosgun/assisted_robot_drive.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SourceCode/RoboTracking.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/acosgun/assisted_robot_drive.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>88008A34-CFC4-4E4B-BAAB-A7FEEBE220EE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>assisted_robot_drive</string>
+		</dict>
+	</array>
+</dict>
+</plist>
