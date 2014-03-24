@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "UDP_helper.h"
+#import <CoreLocation/CoreLocation.h>
+
+#import "SettingsViewController.h"
 
 BOOL is_connected;
 BOOL is_running = NO;
@@ -16,6 +20,8 @@ CMMotionManager *MotionManager;
 float currentPitch;
 float currentRoll;
 float currentYaw;
+float currentTrueHeading;
+float currentMagHeading;
 float speed;
 float xloc;
 float xcenter;
@@ -23,7 +29,7 @@ UITouch *touch;
 CGPoint location_on_touch;
 float distance;
 
-@interface RemoteControlViewController : UIViewController
+@interface RemoteControlViewController : UIViewController <CLLocationManagerDelegate>
 {
     IBOutlet UILabel *distance_label;
     IBOutlet UILabel *instruction_label;

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		12B1867418D7953B003FBEA6 /* DebuggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B1867318D7953B003FBEA6 /* DebuggerViewController.m */; };
+		7A17C34418DF92B300A9A186 /* UDP_helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A17C34318DF92B300A9A186 /* UDP_helper.m */; };
+		7A17C34618DFBFFC00A9A186 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A17C34518DFBFFC00A9A186 /* CoreLocation.framework */; };
+		7A17C34918DFC8D000A9A186 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A17C34818DFC8D000A9A186 /* SettingsViewController.m */; };
 		7A36DB2B18D5548E005D6308 /* spanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A36DB2918D5548E005D6308 /* spanner.png */; };
 		7A36DB2C18D5548E005D6308 /* arrow-small-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A36DB2A18D5548E005D6308 /* arrow-small-16.png */; };
 		7A6FA91118BEF27800DBC726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6FA91018BEF27800DBC726 /* Foundation.framework */; };
@@ -42,6 +45,11 @@
 /* Begin PBXFileReference section */
 		12B1867218D7953B003FBEA6 /* DebuggerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebuggerViewController.h; sourceTree = "<group>"; };
 		12B1867318D7953B003FBEA6 /* DebuggerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebuggerViewController.m; sourceTree = "<group>"; };
+		7A17C34218DF92B300A9A186 /* UDP_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UDP_helper.h; path = ../UDP_helper.h; sourceTree = "<group>"; };
+		7A17C34318DF92B300A9A186 /* UDP_helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDP_helper.m; path = ../UDP_helper.m; sourceTree = "<group>"; };
+		7A17C34518DFBFFC00A9A186 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7A17C34718DFC8D000A9A186 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ../SettingsViewController.h; sourceTree = "<group>"; };
+		7A17C34818DFC8D000A9A186 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ../SettingsViewController.m; sourceTree = "<group>"; };
 		7A36DB2918D5548E005D6308 /* spanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spanner.png; path = static/spanner.png; sourceTree = "<group>"; };
 		7A36DB2A18D5548E005D6308 /* arrow-small-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-small-16.png"; path = "static/arrow-small-16.png"; sourceTree = "<group>"; };
 		7A6FA90D18BEF27800DBC726 /* robot_ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = robot_ui.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A17C34618DFBFFC00A9A186 /* CoreLocation.framework in Frameworks */,
 				7AF5316C18D76DCF00127E5D /* CoreMotion.framework in Frameworks */,
 				7A90631B18BEFF6500C6B038 /* AudioToolbox.framework in Frameworks */,
 				7A6FA91318BEF27800DBC726 /* CoreGraphics.framework in Frameworks */,
@@ -126,6 +135,7 @@
 		7A6FA90F18BEF27800DBC726 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A17C34518DFBFFC00A9A186 /* CoreLocation.framework */,
 				7AF5316B18D76DCF00127E5D /* CoreMotion.framework */,
 				7A90631A18BEFF6500C6B038 /* AudioToolbox.framework */,
 				7A6FA91018BEF27800DBC726 /* Foundation.framework */,
@@ -141,6 +151,8 @@
 			children = (
 				7A36DB2818D5547C005D6308 /* Images */,
 				7A6FA91F18BEF27800DBC726 /* AppDelegate.h */,
+				7A17C34218DF92B300A9A186 /* UDP_helper.h */,
+				7A17C34318DF92B300A9A186 /* UDP_helper.m */,
 				7A6FA92018BEF27800DBC726 /* AppDelegate.m */,
 				7A6FA92218BEF27800DBC726 /* Images.xcassets */,
 				7A90631518BEF34700C6B038 /* Main.storyboard */,
@@ -148,6 +160,8 @@
 				7A90631818BEFD5B00C6B038 /* RemoteControlViewController.m */,
 				12B1867218D7953B003FBEA6 /* DebuggerViewController.h */,
 				12B1867318D7953B003FBEA6 /* DebuggerViewController.m */,
+				7A17C34718DFC8D000A9A186 /* SettingsViewController.h */,
+				7A17C34818DFC8D000A9A186 /* SettingsViewController.m */,
 				7A6FA91718BEF27800DBC726 /* Supporting Files */,
 			);
 			path = robot_ui;
@@ -230,7 +244,7 @@
 				ORGANIZATIONNAME = "Akansel Cosgun";
 				TargetAttributes = {
 					7A6FA90C18BEF27800DBC726 = {
-						DevelopmentTeam = 89JRG4TE28;
+						DevelopmentTeam = 3G86Q7G4CY;
 					};
 					7A6FA92718BEF27900DBC726 = {
 						TestTargetID = 7A6FA90C18BEF27800DBC726;
@@ -287,7 +301,9 @@
 				7A6FA92118BEF27800DBC726 /* AppDelegate.m in Sources */,
 				7A6FA91D18BEF27800DBC726 /* main.m in Sources */,
 				7A90631918BEFD5B00C6B038 /* RemoteControlViewController.m in Sources */,
+				7A17C34918DFC8D000A9A186 /* SettingsViewController.m in Sources */,
 				12B1867418D7953B003FBEA6 /* DebuggerViewController.m in Sources */,
+				7A17C34418DF92B300A9A186 /* UDP_helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +421,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "robot_ui/robot_ui-Prefix.pch";
 				INFOPLIST_FILE = "robot_ui/robot_ui-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -419,10 +437,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "robot_ui/robot_ui-Prefix.pch";
 				INFOPLIST_FILE = "robot_ui/robot_ui-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
