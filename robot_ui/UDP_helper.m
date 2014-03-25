@@ -2,8 +2,8 @@
 //  UDP_helper.m
 //  robot_ui
 //
-//  Created by Akansel Cosgun on 3/23/14.
-//  Copyright (c) 2014 Akansel Cosgun. All rights reserved.
+//  Created by Kaya Demir, Akansel Cosgun, Arnold Maliki on 3/23/14.
+//  Copyright (c) 2014 Kaya Demir, Akansel Cosgun, Arnold Maliki. All rights reserved.
 //
 
 #import "UDP_helper.h"

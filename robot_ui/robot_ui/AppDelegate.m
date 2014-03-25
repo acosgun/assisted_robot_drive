@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  robot_ui
 //
-//  Created by Akansel Cosgun on 2/26/14.
-//  Copyright (c) 2014 Akansel Cosgun. All rights reserved.
+//  Created by Kaya Demir, Akansel Cosgun, Arnold Maliki on 2/26/14.
+//  Copyright (c) 2014 Kaya Demir, Akansel Cosgun, Arnold Maliki. All rights reserved.
 //
 
 #import "AppDelegate.h"

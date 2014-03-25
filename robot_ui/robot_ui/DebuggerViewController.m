@@ -2,8 +2,8 @@
 //  DebuggerViewController.m
 //  robot_ui
 //
-//  Created by Arnold Maliki on 3/17/14.
-//  Copyright (c) 2014 Akansel Cosgun. All rights reserved.
+//  Created by Kaya Demir, Akansel Cosgun, Arnold Maliki on 3/17/14.
+//  Copyright (c) 2014 Kaya Demir, Akansel Cosgun, Arnold Maliki. All rights reserved.
 //
 
 #import "DebuggerViewController.h"
@@ -93,6 +93,8 @@
     NSString* ip_add = @"192.168.1.19";
     int port_num = 7575;
     socket_success = [udp_node initializeSocket:ip_add port:port_num];
+    is_on_screen = NO;
+
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {

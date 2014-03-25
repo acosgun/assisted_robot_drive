@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
+BOOL is_on_screen;
 @interface SettingsViewController : UIViewController <UITextFieldDelegate>
 @end

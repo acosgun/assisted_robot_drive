@@ -41,6 +41,7 @@
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     is_running = YES;
+    is_instruction_hidden = true;
     UITouch *drag = [[event allTouches] anyObject];
     CGPoint location_on_drag = [drag locationInView:self.view];
     xloc = xcenter + (location_on_drag.x - location_on_touch.x);
@@ -66,9 +67,10 @@
     CMDeviceMotion *motion = MotionManager.deviceMotion;
     Attitude = motion.attitude;
     is_running = true;
+    if (is_instruction_hidden) {
+       instruction_label.hidden = YES;
+    }
     if (is_running) {
-        instruction_label.hidden = YES;
-        
         currentPitch = degrees(Attitude.pitch);
         currentRoll = degrees(Attitude.roll);
         currentYaw  = degrees(Attitude.yaw);
@@ -100,12 +102,17 @@
         }
 
         
-        if (distance>2){
-            distance_label.hidden = YES;
+        if ((distance<2) && (is_instruction_hidden)){
+            distance_label.hidden = NO;
+            is_vibrate = YES;
+            distance_label.text = [NSString stringWithFormat:@"%0.01f m", distance];
+            //[self Vibrate];
+            
         }
         else {
-            distance_label.hidden = NO;
-            distance_label.text = [NSString stringWithFormat:@"%0.01f m", distance];
+            distance_label.hidden = YES;
+            is_vibrate = NO;
+            counter = distance;
         }
     }
     //NSLog(@"is running : %@", [NSString stringWithFormat:@"%d", is_running]);
@@ -137,6 +144,7 @@
     
     distance = 1;
     is_connected = YES;
+    is_on_screen = YES;
     distance_label.transform = CGAffineTransformMakeRotation(-90 * M_PI / 180.0);
     instruction_label.transform = CGAffineTransformMakeRotation(-90 * M_PI / 180.0);
     distance_label.hidden = YES;
@@ -146,7 +154,6 @@
     [MotionManager startDeviceMotionUpdates];
     
     timer1 = [NSTimer scheduledTimerWithTimeInterval:1/60 target:self selector:@selector(Running) userInfo:nil repeats:YES];
-
 
     socket_success = [self initialize_UDP];
 }
@@ -175,10 +182,20 @@
     currentMagHeading = (float) newHeading.trueHeading;
 }
 
+-(void)Vibrate{
+    counter = counter + 0.0005;
+    if (is_vibrate && (counter >= distance) && is_on_screen) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        counter = 0;
+    }
+    NSLog(@"counter : %@", [NSString stringWithFormat:@"%1.6f", counter]);
+}
+
 - (void) updateIP
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     ip_add =[prefs stringForKey:@"prev_ip_add"];
+    NSLog(@"IP : %@", ip_add);
 }
 
 - (void) updateDeviceID

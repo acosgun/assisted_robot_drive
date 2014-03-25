@@ -2,8 +2,8 @@
 //  DebuggerViewController.h
 //  robot_ui
 //
-//  Created by Arnold Maliki on 3/17/14.
-//  Copyright (c) 2014 Akansel Cosgun. All rights reserved.
+//  Created by Kaya Demir, Akansel Cosgun, Arnold Maliki on 3/17/14.
+//  Copyright (c) 2014 Kaya Demir, Akansel Cosgun, Arnold Maliki. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -17,6 +17,9 @@ float currentRoll;
 float currentYaw;
 float currentTrueHeading;
 float currentMagHeading;
+
+BOOL is_on_screen;
+
 
 
 @interface DebuggerViewController : UIViewController <CLLocationManagerDelegate>

@@ -2,11 +2,12 @@
 //  SettingsViewController.m
 //  robot_ui
 //
-//  Created by Akansel Cosgun on 3/23/14.
-//  Copyright (c) 2014 Akansel Cosgun. All rights reserved.
+//  Created by Kaya Demir, Akansel Cosgun, Arnold Maliki on 3/23/14.
+//  Copyright (c) 2014 Kaya Demir, Akansel Cosgun, Arnold Maliki. All rights reserved.
 //
 
 #import "SettingsViewController.h"
+
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *human_centered_switch;
@@ -52,7 +53,7 @@
     _ip_textfield.text = prev_ip_add;
     _human_centered_switch.on=prev_human_centered;
     _device_id_switch.on=prev_device_id;
-    
+    is_on_screen = NO;
     // Do any additional setup after loading the view.
 }
 

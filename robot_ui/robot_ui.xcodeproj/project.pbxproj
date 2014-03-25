@@ -244,7 +244,7 @@
 				ORGANIZATIONNAME = "Akansel Cosgun";
 				TargetAttributes = {
 					7A6FA90C18BEF27800DBC726 = {
-						DevelopmentTeam = 3G86Q7G4CY;
+						DevelopmentTeam = 89JRG4TE28;
 					};
 					7A6FA92718BEF27900DBC726 = {
 						TestTargetID = 7A6FA90C18BEF27800DBC726;

@@ -16,6 +16,9 @@
 
 BOOL is_connected;
 BOOL is_running = NO;
+BOOL is_vibrate = NO;
+extern BOOL is_on_screen;
+BOOL is_instruction_hidden = false;
 CMMotionManager *MotionManager;
 float currentPitch;
 float currentRoll;
@@ -28,6 +31,7 @@ float xcenter;
 UITouch *touch;
 CGPoint location_on_touch;
 float distance;
+float counter;
 
 @interface RemoteControlViewController : UIViewController <CLLocationManagerDelegate>
 {
@@ -35,9 +39,11 @@ float distance;
     IBOutlet UILabel *instruction_label;
     IBOutlet UIImageView *slider;
     NSTimer *timer1;
+
 }
 
 
 -(void)Running;
+-(void)Vibrate;
 
 @end
