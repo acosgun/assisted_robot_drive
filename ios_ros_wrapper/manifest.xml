@@ -1,0 +1,15 @@
+<package>
+  <description brief="ios_ros_wrapper">
+
+     ios_ros_wrapper
+
+  </description>
+  <author>acosgun</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ios_ros_wrapper</url>
+  <depend package="roscpp"/>
+
+</package>
+
+

@@ -1,0 +1,16 @@
+<package>
+  <description brief="human_centric_remote_control">
+
+     human_centric_remote_control
+
+  </description>
+  <author>acosgun</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/human_centric_remote_control</url>
+  <depend package="roscpp"/>
+  <depend package="ios_ros_wrapper"/>
+  <depend package="geometry_msgs"/>
+</package>
+
+

@@ -1,0 +1,4 @@
+<launch>
+	<node name="ios_ros_wrapper" pkg="ios_ros_wrapper" type="ios_ros_wrapper" respawn="false" output="screen">
+	</node>
+</launch>

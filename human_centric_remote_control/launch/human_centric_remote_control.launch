@@ -1,0 +1,9 @@
+<launch>
+	<node name="ios_ros_wrapper" pkg="ios_ros_wrapper" type="ios_ros_wrapper" respawn="false" output="screen">
+	</node>
+
+	<node name="human_centric_remote_control" pkg="human_centric_remote_control" type="human_centric_remote_control" respawn="false" output="screen">
+
+	</node>
+
+</launch>

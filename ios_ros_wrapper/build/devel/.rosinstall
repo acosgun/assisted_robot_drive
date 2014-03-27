@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/acosgun/repos/assisted_robot_drive/ios_ros_wrapper/build/devel/setup.sh

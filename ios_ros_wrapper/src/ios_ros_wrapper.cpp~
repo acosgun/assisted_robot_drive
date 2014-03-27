@@ -1,0 +1,36 @@
+//STL
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/socket.h>
+
+//ROS
+#include <ros/ros.h>
+
+class IosRosWrapper
+{
+
+protected:
+  ros::NodeHandle n_;
+public:
+  IosRosWrapper (): n_("~")
+  {
+    int success_udp = initializeUDP();
+  }
+  int initializeUDP()
+  {
+    int fd;
+    if((fd = socket(AF_INET, SOCK_DGRAM,0))<0) {
+      perror("cannot create socket");
+      return 0;
+
+    }
+  }
+};
+
+int main (int argc, char** argv)
+{
+  ros::init(argc, argv, "IosRosWrapper");
+  IosRosWrapper wrapper;
+  ros::spin();
+}
