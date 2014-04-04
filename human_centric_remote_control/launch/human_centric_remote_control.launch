@@ -3,7 +3,13 @@
 	</node>
 
 	<node name="human_centric_remote_control" pkg="human_centric_remote_control" type="human_centric_remote_control" respawn="false" output="screen">
-
+	      <remap from="cmd_vel" to="/cmd_vel_mux/input/teleop"/>
+	      <param name="control_frequency" value="10.0" />
+	      <param name="angle_threshold_for_angular" value="70.0" />
+	      <param name="vel_linear_max" value="0.2" />
+	      <param name="vel_angular_max" value="0.4" />
+	      <param name="min_mag_to_move" value="0.2" />
+	      <param name="const_vel_window" value="15.0" />
 	</node>
 
 </launch>

@@ -31,7 +31,7 @@ public:
 
   IosRosWrapper (): n_("~"), sock(7575)
   {
-    phoneState_pub_ = n_.advertise<ios_ros_wrapper::PhoneState>("/phone_state",1);
+    phoneState_pub_ = n_.advertise<ios_ros_wrapper::PhoneState>("/phone_state",1000);
   }
   void receive_and_publish_data()
   {
@@ -42,6 +42,10 @@ public:
 
 
       recvMsgSize = sock.recvFrom(echoBuffer, ECHOMAX, sourceAddress,sourcePort);
+      if(recvMsgSize == 0)
+	ROS_INFO("Size is 0!");
+
+ 
       unsigned int buffer_location = 0;
 
       vector<float> data;
@@ -79,12 +83,14 @@ int main (int argc, char** argv)
 {
   ros::init(argc, argv, "IosRosWrapper");
   IosRosWrapper wrapper;
-  ros::Rate loop_rate(2000.0);
-  while(ros::ok())
+
+  //ros::Rate loop_rate(2000.0);  
+  //while(ros::ok())
+    for (;;)
     {
       wrapper.receive_and_publish_data();   
       ros::spinOnce();
-      loop_rate.sleep();
+      //loop_rate.sleep();
     }
   return 0;
 }
