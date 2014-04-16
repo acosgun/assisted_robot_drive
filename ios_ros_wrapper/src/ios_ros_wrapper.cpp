@@ -31,7 +31,7 @@ public:
 
   IosRosWrapper (): n_("~"), sock(7575)
   {
-    phoneState_pub_ = n_.advertise<ios_ros_wrapper::PhoneState>("/phone_state",1000);
+    phoneState_pub_ = n_.advertise<ios_ros_wrapper::PhoneState>("/phone_state",1);
   }
   void receive_and_publish_data()
   {

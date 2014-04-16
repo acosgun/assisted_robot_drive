@@ -11,6 +11,9 @@
   <depend package="roscpp"/>
   <depend package="ios_ros_wrapper"/>
   <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="pcl_ros"/>
+  <depend package="laser_geometry"/>
 </package>
 
 
