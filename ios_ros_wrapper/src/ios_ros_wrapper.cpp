@@ -31,7 +31,7 @@ public:
 
   IosRosWrapper (): n_("~"), sock(7575)
   {
-    phoneState_pub_ = n_.advertise<ios_ros_wrapper::PhoneState>("/phone_state",1);
+    phoneState_pub_ = n_.advertise<ios_ros_wrapper::PhoneState>("/phone_state",2);
   }
   void receive_and_publish_data()
   {
@@ -45,6 +45,10 @@ public:
       if(recvMsgSize == 0)
 	ROS_INFO("Size is 0!");
 
+      //ROS_INFO("UDP");
+      //To Send back message to client!
+      //char* example="A";      
+      //sock.sendTo(example, 1, sourceAddress, sourcePort);
  
       unsigned int buffer_location = 0;
 
@@ -59,14 +63,15 @@ public:
 	  float f1;
 	  memcpy(&f1, echoBuffer+i, sizeof(float));
 	  data.push_back(f1);
-	  //cout<<"f1: "<<f1<<endl;	
+	  //cout<<"f1: "<<f1<<endl;
 	  i=i+3;
 	}
-      
+      //cout<<endl;
+
       //Fill in ROS message
       ios_ros_wrapper::PhoneState msg;
       msg.header.stamp = ros::Time::now();
-      msg.mode = mode;      
+      msg.mode = mode;
       msg.roll = data[0];
       msg.pitch = data[1];
       msg.heading = data[2];
@@ -74,7 +79,8 @@ public:
 	{
 	  msg.speed_setting = data[3];
 	}
-      phoneState_pub_.publish(msg);
+      phoneState_pub_.publish(msg);      
+
   }
   
 };

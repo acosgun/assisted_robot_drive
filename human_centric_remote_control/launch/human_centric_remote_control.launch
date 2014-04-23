@@ -6,13 +6,23 @@
 	      <remap from="cmd_vel" to="/cmd_vel_mux/input/teleop"/>
 	      <param name="control_frequency" value="10.0" />
 	      <param name="angle_threshold_for_angular" value="70.0" />
-	      <param name="vel_linear_max" value="0.25" />
-	      <param name="vel_angular_max" value="0.55" />
-	      <param name="min_mag_to_move" value="0.2" />
-	      <param name="const_vel_window" value="22.5" />
+	      <param name="vel_linear_min" value="0.1" />
+	      <param name="vel_linear_max" value="0.2" />
+	      <param name="vel_angular_max" value="0.5" />
+	      <param name="min_mag_to_move" value="0.15" />
+	      <param name="const_v_window" value="12.5" />
+	      <param name="const_w_window" value="22.5" />
 	      <param name="obstacle_avoidance" value="true" />
-	      <param name="sim_time" value="0.5" />
-	      <param name="robot_radius" value="0.25" />
+	      <param name="sim_time" value="2.0" />
+	      <param name="robot_radius" value="0.24" />
+	      <param name="human_centric_const_v_window" value="15.0" />
+	      <param name="human_centric_const_w_window" value="20.0" />
+	      <param name="mid_test" value="false" />
+	</node>
+
+	<node name="hokuyo" pkg="urg_node" type="urg_node" respawn="false" output="screen">
+	      <param name="angle_min" value="-0.9"/>
+	      <param name="angle_max" value="0.9"/>
 	</node>
 
 </launch>
